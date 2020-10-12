@@ -1,4 +1,4 @@
-const baseUrl = "/super";
+const baseUrl = "/uni";
 
 var user = require("./users.js");
 /**

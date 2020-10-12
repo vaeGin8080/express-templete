@@ -6,7 +6,9 @@ var logger = require("morgan");
 var bodyParser = require("body-parser"); //用于req.body获取值的
 var app = express();
 var router = require("./routes/index");
-
+var io = require("socket.io").listen(3003);
+var socket = require("./utils/socket");
+socket(io);
 //设置允许跨域访问该服务.
 app.all("*", function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
